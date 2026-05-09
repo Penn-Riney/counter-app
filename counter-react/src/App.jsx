@@ -3,12 +3,11 @@ import { useState, useEffect } from "react"; // 👀 Import useState
 
 export default function App() {
   const [count, setCount] = useState(0); // 👀 Replace let count = 0
-
+ 
   // 👀 Add this effect
   useEffect(() => {
     console.log("count changed to:", count);
   }, [count]);
-
   function increment() {
     setCount(count + 1); // 👀 Use setCount instead of count =
   }
@@ -29,4 +28,6 @@ export default function App() {
       <button onClick={reset}>Reset</button>
     </div>
   );
+  
+
 }
