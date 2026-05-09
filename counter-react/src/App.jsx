@@ -1,21 +1,19 @@
 import "./App.css";
+import { useState } from "react"; // 👀 Import useState
 
 export default function App() {
-  let count = 0;
+  const [count, setCount] = useState(0); // 👀 Replace let count = 0
 
   function increment() {
-    count = count + 1;
-    console.log("count is now:", count);
+    setCount(count + 1); // 👀 Use setCount instead of count =
   }
 
   function decrement() {
-    count = count - 1;
-    console.log("count is now:", count);
+    setCount(count - 1);
   }
 
   function reset() {
-    count = 0;
-    console.log("count is now:", count);
+    setCount(0);
   }
 
   return (
